@@ -4,7 +4,7 @@
     <a href="<?= base_url('app/index') ?>" class="brand-link">
       <img src="<?= base_url() ?>assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
-      <span class="brand-text font-weight-light">KOPERASI</span>
+      <span class="brand-text font-weight-light">INDOLAKU</span>
     </a>
 
     <!-- Sidebar -->
@@ -15,7 +15,7 @@
           <img src="<?= base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">Admin Pusat</a>
+          <a href="#" class="d-block">INDOLAKU PUSAT</a>
         </div>
       </div>
 
@@ -35,41 +35,61 @@
             </a>
           </li>
           
-          <li class="nav-header">MEMBER AREA</li>
-          <li class="nav-item">
-            <a href="<?= base_url('app/register_member') ?>" class="nav-link">
-              <i class="nav-icon far fa-user"></i>
-              <p>
-                Registrasi Member
-                <!-- <span class="badge badge-info right">2</span> -->
-              </p>
-            </a>
-          </li>
+          <li class="nav-header">MASTER DATA</li>
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-users"></i>
               <p>
-                Users dan Members
+                Menu User
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="<?= base_url('app/users') ?>" class="nav-link">
+                <a href="<?= base_url('user/admin') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Users</p>
+                  <p>Admin Pusat</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="<?= base_url('app/members') ?>" class="nav-link">
+                <a href="<?= base_url('user/customer') ?>" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Members</p>
+                  <p>Customer</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('user/cabang') ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Cabang</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('user/kurir') ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kurir</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('user/kanvas') ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Kanvas</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('user/to') ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>TO</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="<?= base_url('user/umkm') ?>" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>UMKM</p>
                 </a>
               </li>
             </ul>
           </li>
 
-          <li class="nav-header">AKSI</li>
            <!-- tambah class menu-open untuk secara otomatis membuka -->  	
           <li class="nav-item has-treeview">
             <a href="#" class="nav-link">
