@@ -46,7 +46,7 @@
 
 <!-- Modal -->
 <div class="modal fade" id="tambahModal" tabindex="-1" role="dialog" aria-labelledby="tambahModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
+  <div class="modal-dialog" role="document" style="min-width: 70%">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title" id="tambahModalLabel">Bencana Baru</h5>
@@ -56,66 +56,81 @@
       </div>
       <form action="<?= base_url('bencana/spesifikasi/tambah') ?>" method="post">
 	      <div class="modal-body">
-	        <div class="form-group">
-	        	<label>Jenis Bencana</label>
-	        	<select class="form-control" name="id_bencana">
-	        		<?php foreach($jenis_bencana as $jenis_bencana): ?>
-		        		<option value="<?= $jenis_bencana['id'] ?>"><?= $jenis_bencana['nama'] ?></option>
-		        	<?php endforeach; ?>
-	        	</select>
-	        </div>
-	        <div class="form-group">
-	        	<label>Lokasi Bencana</label>
-	        	<select class="form-control" name="id_lokasi">
-	        		<?php foreach($provinces as $provinces): ?>
-		        		<option value="<?= $provinces['id'] ?>"><?= $provinces['name'] ?></option>
-		        	<?php endforeach; ?>
-	        	</select>
-	        </div>
-	        <div class="form-group">
-	        	<label>Radius Skala</label>
-	        	<select class="form-control" name="radius">
-	        		<option value="&lt; 10">&lt; 10 KM</option>
-	        		<option value="&le; 50">&le; 50 KM</option>
-	        		<option value="&le; 100">&le; 100 KM</option>
-	        		<option value="&gt; 100">&gt; 100 KM</option>
-	        	</select>
-	        </div>
-	        <div class="form-group">
-	        	<label>Level Bahaya</label>
-	        	<select class="form-control" name="level">
-	        		<?php foreach($level_bencana as $level): ?>
-	        			<option value="<?= $level['id'] ?>"><?= $level['nama'] ?></option>
-		        	<?php endforeach; ?>
-	        	</select>
-	        </div>
+	      	<div class="row">
+	      		<div class="col-6">
+
+			        <div class="form-group">
+			        	<label>Jenis Bencana</label>
+			        	<select class="form-control" name="id_bencana">
+			        		<?php foreach($jenis_bencana as $jenis_bencana): ?>
+				        		<option value="<?= $jenis_bencana['id'] ?>"><?= $jenis_bencana['nama'] ?></option>
+				        	<?php endforeach; ?>
+			        	</select>
+			        </div>
+			        <div class="form-group">
+			        	<label>Lokasi Bencana</label>
+			        	<select class="form-control" name="id_lokasi">
+			        		<?php foreach($provinces as $provinces): ?>
+				        		<option value="<?= $provinces['id'] ?>"><?= $provinces['name'] ?></option>
+				        	<?php endforeach; ?>
+			        	</select>
+			        </div>
+			        <div class="form-group">
+			        	<label>Radius Skala</label>
+			        	<select class="form-control" name="radius">
+			        		<option value="&lt; 10">&lt; 10 KM</option>
+			        		<option value="&le; 50">&le; 50 KM</option>
+			        		<option value="&le; 100">&le; 100 KM</option>
+			        		<option value="&gt; 100">&gt; 100 KM</option>
+			        	</select>
+			        </div>
+			        <div class="form-group">
+			        	<label>Level Bahaya</label>
+			        	<select class="form-control" name="level">
+			        		<?php foreach($level_bencana as $level): ?>
+			        			<option value="<?= $level['id'] ?>"><?= $level['nama'] ?></option>
+				        	<?php endforeach; ?>
+			        	</select>
+			        </div>
+	      		</div>
+
+	      		<div class="col-6">
+
+			        <div class="row">
+			        	<div class="col-12">
+			        		<div class="form-group">
+				        		<label>Kebutuhan Keahlian</label>
+			        		</div>
+			        	</div>
+			        	<div class="col-4">
+					        <div class="form-check">
+									  <input class="form-check-input" type="checkbox" value="" name="berenang" id="defaultCheck1">
+									  <label class="form-check-label" for="defaultCheck1">
+									    Bisa Berenang
+									  </label>
+									</div>
+			        	</div>
+			        	<div class="col-4">
+			        		<div class="form-check">
+									  <input class="form-check-input" type="checkbox" value="" name="mendaki" id="defaultCheck2">
+									  <label class="form-check-label" for="defaultCheck2">
+									    Bisa Mendaki
+									  </label>
+									</div>
+			        	</div>
+			        	<div class="col-4"> 
+			        		<div class="form-check">
+									  <input class="form-check-input" type="checkbox" value="" name="menyelam" id="defaultCheck3">
+									  <label class="form-check-label" for="defaultCheck3">
+									    Bisa Menyelam
+									  </label>
+									</div>
+			        	</div>
+			        </div>
+
+	      		</div>
+	      	</div>
 	        <hr>
-	        <div class="row">
-	        	<div class="col-4">
-			        <div class="form-check">
-							  <input class="form-check-input" type="checkbox" value="" name="berenang" id="defaultCheck1">
-							  <label class="form-check-label" for="defaultCheck1">
-							    Bisa Berenang
-							  </label>
-							</div>
-	        	</div>
-	        	<div class="col-4">
-	        		<div class="form-check">
-							  <input class="form-check-input" type="checkbox" value="" name="mendaki" id="defaultCheck2">
-							  <label class="form-check-label" for="defaultCheck2">
-							    Bisa Mendaki
-							  </label>
-							</div>
-	        	</div>
-	        	<div class="col-4"> 
-	        		<div class="form-check">
-							  <input class="form-check-input" type="checkbox" value="" name="menyelam" id="defaultCheck3">
-							  <label class="form-check-label" for="defaultCheck3">
-							    Bisa Menyelam
-							  </label>
-							</div>
-	        	</div>
-	        </div>
 	      </div>
 	      <div class="modal-footer">
 	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
