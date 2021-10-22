@@ -20,7 +20,7 @@
 									<td><?= $nomor++ ?>.</td>
 									<td><?= $bencana['nama'] ?></td>
 									<td>
-										<button class="badge badge-primary badge-sm" type="button">detail</button>
+										<button class="badge badge-primary badge-sm w-100" type="button">detail</button>
 									</td>
 								</tr>
 							<?php endforeach; ?>

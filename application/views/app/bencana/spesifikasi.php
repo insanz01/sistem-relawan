@@ -24,10 +24,10 @@
 										<td><?= $nomor++ ?>.</td>
 										<td><?= $bencana['lokasi'] ?></td>
 										<td><?= $bencana['jenis'] ?></td>
-										<td><?= $bencana['radius'] ?></td>
+										<td><?= $bencana['radius'] ?> KM</td>
 										<td><?= $bencana['level'] ?></td>
 										<td>
-											<button type="button" class="badge badge-primary badge-sm">Detail</button>
+											<button type="button" class="badge badge-primary badge-sm w-100">Detail</button>
 										</td>
 									</tr>
 								<?php endforeach; ?>
