@@ -113,12 +113,6 @@
 									</li>
 								</ul>
 							</li>
-							<li class="nav-item">
-								<a href="<?= base_url() ?>" class="nav-link">
-									<i class="nav-icon fas fa-people-carry"></i>
-									<p>Tanggap Darurat</p>
-								</a>
-							</li>
 							<!-- tambah class menu-open untuk secara otomatis membuka -->
 							<li class="nav-item has-treeview">
 								<a href="#" class="nav-link">
@@ -143,6 +137,21 @@
 									</li>
 								</ul>
 							</li>
+
+							<li class="nav-header">RELAWAN AREA</li>
+							<li class="nav-item">
+								<a href="<?= base_url('bencana/tanggap') ?>" class="nav-link">
+									<i class="nav-icon fas fa-people-carry"></i>
+									<p>Tanggap Darurat</p>
+								</a>
+							</li>
+							<!-- kemampuan -->
+							<!-- <li class="nav-item">
+								<a href="<?= base_url('kemampuan/index') ?>" class="nav-link">
+									<i class="nav-icon fas fa-hand-lizard"></i>
+									<p>Kemampuan</p>
+								</a>
+							</li> -->
 							<!-- tambah class menu-open untuk secara otomatis membuka -->
 							<li class="nav-item has-treeview">
 								<a href="#" class="nav-link">

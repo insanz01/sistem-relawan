@@ -9,6 +9,7 @@ class Bencana extends CI_Controller {
 
 		$this->load->model('CRUDModel', 'crud');
 		$this->load->model('BencanaModel', 'm_bencana');
+		$this->load->model('RelawanModel', 'm_relawan');
 	}
 
 	public function index($aksi = NULL) {
@@ -57,6 +58,31 @@ class Bencana extends CI_Controller {
 			$data['level_bencana'] = $this->crud->get('level_bencana');
 
 			$this->template->load('layouts/dashboard', 'app/bencana/spesifikasi', $data);
+		}
+	}
+
+	public function tanggap($aksi = NULL) {
+
+		if($aksi == "tambah") {
+
+			$data = $this->input->post();
+			$data['id'] = NULL;
+
+			if($this->crud->insert("tugas_relawan", $data)) {
+				$this->session->set_flashdata('pesan', '<div class="alert alert-success" role="alert">Relawan berhasil ditugaskan</div>');
+			} else {
+				$this->session->set_flashdata('pesan', '<div class="alert alert-danger" role="alert">Relawan gagal ditugaskan</div>');
+			}
+
+			redirect('bencana/tanggap');
+		
+		} else {
+
+			$data['bencana'] = $this->m_bencana->get();
+			$data['relawan'] = $this->m_relawan->get();
+			$data['tugas_relawan'] = $this->m_relawan->tugas();
+
+			$this->template->load('layouts/dashboard', 'app/tanggap/index', $data);
 		}
 	}
 }
